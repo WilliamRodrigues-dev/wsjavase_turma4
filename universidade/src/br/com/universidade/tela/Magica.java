@@ -7,7 +7,7 @@ public class Magica {
 		return Float.parseFloat(s(msg));
 	}
 	
-	public static int i(String msg) {
+	public static int i(String msg) throws Exception{
 		return Integer.parseInt(s(msg));
 	}
 	
