@@ -41,8 +41,8 @@ public abstract class Produto {
 	}
 	
 	//deve retornar o valor de venda com 10% de desconto
-	public double getValorVista() {
-		return valorVenda*0.9;
+	public float getValorVista() {
+		return valorVenda*0.9f;
 	}
 	
 	// retornar o valor de venda com o desconto conforme a porcentagem recebida

@@ -1,12 +1,12 @@
 package br.com.veiculos.modelo;
 
 public class Automovel {
-	private String placa;
+	private String placa = new String();
 	private float valorIPVA;
 	private float valorSeguro;
 	private float velocidadeAtual;
 	private int capacidadeTanque;
-	private Montadora montadora;
+	private Montadora montadora = new Montadora();
 	
 	public Montadora getMontadora() {
 		return montadora;
