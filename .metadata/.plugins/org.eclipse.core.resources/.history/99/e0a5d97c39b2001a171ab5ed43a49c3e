@@ -1,0 +1,21 @@
+package br.com.loja.principal;
+
+import br.com.loja.beans.Produto;
+
+public class ImplementarProduto {
+
+	public static void main(String[] args) {
+		Produto objeto = new Produto();
+		objeto.setCodigo(1);
+		objeto.setDescricao("CANETA AZUL");
+		objeto.setValorVenda(10);
+		objeto.setValorCompra(8);
+		System.out.println(objeto.getCodigo());
+		System.out.println(objeto.getDescricao());
+		System.out.println(objeto.getValorVenda());
+		System.out.println(objeto.getValorCompra());
+		
+
+	}
+
+}

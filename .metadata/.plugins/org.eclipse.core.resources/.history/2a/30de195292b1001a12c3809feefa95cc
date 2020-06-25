@@ -1,0 +1,40 @@
+package br.com.universidade.modelo;
+
+public class Aluno {
+	//Sintaxe para montar um método no JAVA
+	// <modificador> <retorno> nomeMetodo(<tipoParametro> <nomeParametro>){}
+	private String nome;
+	private int numeroMatricula;
+	private String email;
+	
+	// objeto.preencherTudo(); => nome, numeroMatricula, email
+	// objeto.exibirTudo(); => nome, numeroMatricula, email
+	
+	public String exibirEmail() {
+		return email;
+	}
+	
+	public void preencherEmail(String pEmail) {
+		email = pEmail.toLowerCase();
+	}
+	
+	public int exibirNumeroMatricula() {
+		return numeroMatricula;
+	}
+	
+	public void preencherNumeroMatricula(int pNumeroMatricula) {
+		numeroMatricula=pNumeroMatricula;
+	}
+	
+	public void preencherNome(String pNome) {
+		if (pNome.length()<=50) {
+			nome = pNome.toUpperCase();
+		}
+	}
+	
+	public String exibirNome() {
+		return nome;
+	}
+	
+	
+}

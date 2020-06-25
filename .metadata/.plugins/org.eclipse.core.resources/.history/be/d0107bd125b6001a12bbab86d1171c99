@@ -1,0 +1,26 @@
+package br.com.loja.principal;
+
+import javax.swing.JOptionPane;
+
+import xpto.CD;
+
+public class ImplementarProdutoComHeranca {
+
+	public static void main(String[] args) {
+		//quero que o usuario escolha o que ele vai preencher
+		// Livro ou CD
+		char opcao = JOptionPane.showInputDialog
+				("Digite:\n<1> CD ou\n<2> Livro").charAt(0);
+		if (opcao=='1') {
+			CD cd = new CD();
+			
+		}else if (opcao=='2') {
+			
+		}else {
+			System.out.println("Opção inválida!!!!");
+		}
+		
+		
+	}
+
+}

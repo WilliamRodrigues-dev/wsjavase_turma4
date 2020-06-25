@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+class ExemploRepeticao{
+public static void main(String args[]){
+Scanner teclado = new Scanner(System.in);
+int contMasculino=0;
+int contFeminino=0;
+char sexo=' ';
+//int resposta=0;
+do{
+	System.out.println("Digite <M> ou <F>");
+	sexo = teclado.next().toUpperCase().charAt(0);
+	if (sexo=='F'){
+		contFeminino++;
+	}else if (sexo=='M'){
+		contMasculino++;
+	}else{
+		System.out.println("Digite somente <M> ou <F>");
+		//resposta=1;
+	}
+//}while(resposta==0);
+}while(JOptionPane.showConfirmDialog(
+			null, "Continua?", "Pergunta", 
+			JOptionPane.YES_NO_OPTION, 
+			JOptionPane.QUESTION_MESSAGE
+			)==0
+	);
+System.out.println("Total de pessoas do sexo Feminino: " + contFeminino);
+System.out.println("Total de pessoas do sexo Masculino: " + contMasculino);
+}
+
+
+}

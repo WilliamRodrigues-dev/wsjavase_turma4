@@ -1,0 +1,14 @@
+package br.com.universidade.implementacao;
+
+import br.com.universidade.modelo.Aluno;
+
+public class TesteTudo {
+
+	public static void main(String[] args) {
+		Aluno aluno = new Aluno();
+		aluno.preencherTudo("HUMBERTO", 1706, "humberto@fiap.com.br");
+		aluno.exibirTudo();
+
+	}
+
+}

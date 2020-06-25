@@ -1,0 +1,38 @@
+package br.com.veiculos.principal;
+
+import br.com.veiculos.modelo.Automovel;
+
+public class TesteVeiculo {
+
+	public static void main(String[] args) {
+		Automovel fusca = new Automovel(
+				"HDS-1234",
+				500,
+				2000,
+				0,
+				40
+				);
+		//Teste getTotal()
+		System.out.println("Custo por ano: " + fusca.getTotal());
+		//Teste acelerar()/acelar(param)/desacelerar(param)
+		fusca.acelerar();
+		fusca.acelerar();	
+		fusca.acelerar(50);
+		System.out.println(fusca.getVelocidadeAtual());
+		fusca.desacelerar(30);
+		System.out.println(fusca.getVelocidadeAtual());
+		fusca.desacelerar(200);
+		System.out.println(fusca.getVelocidadeAtual());
+		//Teste getDistancia(param)
+		System.out.println("Percorre com um tanque:" + fusca.getDistancia(8));
+		//Teste getStatus()
+		System.out.println("O fusca está em movimento?" + fusca.getStatus());	
+	}
+
+}
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+package variaveis;
+
+import javax.swing.JOptionPane;
+
+class Conversao{
+
+public static void main(String args[]){
+
+String nome = JOptionPane.showInputDialog("Digite o nome: "); 
+String disciplina = JOptionPane.showInputDialog("Digite a disciplina:");
+float nota1 = Float.parseFloat(JOptionPane.showInputDialog("Digite a primeira nota:"));
+//Classes Wrapper's => são classes que apoiam os dados do tipo primitivo
+// Float.parseFloat() => float
+// Double.parseDouble() => double
+// Integer.parseInt() => int
+
+// capturar a segunda nota / calcular a media aritmetica / exibir a media pro aluno
+float nota2 = Float.parseFloat(JOptionPane.showInputDialog("Digite a segunda nota:"));
+float media = (nota1 + nota2)/2;
+
+JOptionPane.showMessageDialog(null, "Aluno:" + nome + "\nMateria:" + disciplina + "\nMédia: " + media);
+
+// Conversão implicita
+// int idade = 7;
+// float media = idade;
+
+// Conversao explicita
+// float media=8.5;
+// int resultado = media; (Dá erro)
+// int resultado = (int) media; (Funciona - chama de Cast)
+
+
+
+}
+
+
+}

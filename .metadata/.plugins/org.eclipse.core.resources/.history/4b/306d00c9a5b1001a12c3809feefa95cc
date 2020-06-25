@@ -1,0 +1,52 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class Slide77Exercicio4 {
+
+	public static void main(String[] args) {
+		// maisvelha (idade+nome), maisnova (idade+nome), 
+		int idade=0;
+		String nome="";
+		int totalIdades=0;
+		int qtdePessoas=0;
+		int idadeMaisNova=0;
+		int idadeMaisVelha=0;
+		String nomeMaisNova="";
+		String nomeMaisVelha="";
+		int maioresIdade=0;
+		do {
+
+			nome=JOptionPane.showInputDialog("Digite o nome").toUpperCase();
+			idade=Integer.parseInt(JOptionPane.showInputDialog("Digite a idade"));
+			totalIdades+=idade; // totalIdades = totalIdades+idade;
+			qtdePessoas++; // qtdePessoas=qtdePessoas+1;
+			if (idade>=18) {
+				maioresIdade++;
+			}
+			
+			if (qtdePessoas==1) {
+				idadeMaisNova=idade;
+				nomeMaisNova=nome;
+				idadeMaisVelha=idade;
+				nomeMaisVelha=nome;
+			}else if (idade<idadeMaisNova) {
+				idadeMaisNova=idade;
+				nomeMaisNova=nome;
+			}else {
+				idadeMaisVelha=idade;
+				nomeMaisVelha=nome;
+			}
+
+		}while(JOptionPane.showConfirmDialog
+				(null, "Continuar?","Pergunta", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE)
+				==0);
+		
+		System.out.println("Mais Jovem: " + nomeMaisNova + " com " + idadeMaisNova + " anos.");
+		System.out.println("Mais Experiente: " + nomeMaisVelha + " com " + idadeMaisVelha + " anos.");
+		System.out.println("Maiores de idade: " + maioresIdade);
+		System.out.println("Média de idade: " + (totalIdades/qtdePessoas));
+
+	}
+
+}
